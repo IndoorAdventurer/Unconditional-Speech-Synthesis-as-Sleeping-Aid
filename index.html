@@ -11,15 +11,49 @@
     
     <h1>Unconditional Speech Synthesis as Sleeping Aid</h1>
 
-    <p>Here we present our results.</p>
+    <p>This blogpost provides some additional results for our Semester Project on Machine Learning. See <a href="Machine_Learning_Semester_Project.pdf" style="color: rgb(214, 71, 14);">this report</a> for further details.</p>
 
     <h2>Tempolar Voice Classification</h2>
-    <video controls>
-        <source src="voice_rec/resnet18_prediction.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
 
-    <h2>Synthesis</h2>
+    <p>We first present the results of some of our temporal voioce recognition classifiers. Below, one finds four videos of  a small fragment from `Maarten van Rossem - De Podcast'. In these videos we visualise the output of our classifiers with colors. We use <span style="color:blue">blue</span> to show that the model thinks Maarten van Rossem is talking, <span style="color:red">red</span> for Tom Jessen and <span style="color:green">green</span> for `Neither'.</p>
+    <p>The fragment we selected gives our models a challenge, as it contains an active discussion between Maarten van Rossem and Tom Jessen. In addition, the intro-tune is still playing slightly in the background.</p>
+
+    <div class="classify_vid">
+        <p><b>ResNet18</b> -- Testing accuracy: 98.45%</p>
+        <video controls>
+            <source src="voice_rec/resnet18_prediction.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="classify_vid">
+        <p><b>Mixture of Gaussians</b> -- Testing accuracy: 97.30%</p>
+        <video controls>
+            <source src="voice_rec/gmm_prediction.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="classify_vid">
+        <p><b>K Nearest Neighbors</b> -- Testing accuracy: 96.49%</p>
+        <video controls>
+            <source src="voice_rec/knn_prediction.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="classify_vid">
+        <p><b>Ridge Regression</b> -- Testing accuracy: 95.19%</p>
+        <video controls>
+            <source src="voice_rec/rr_prediction.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <h2>Unconditional Speech Synthesis</h2>
+
+    <p>Now we present results for speech synthesis. First, some of our final results. Below we show 3 generated fragments of 5 minutes each.</p>
+
     <audio controls>
         <source src="voice_synth/clip_1.wav" type="audio/wav">
         Your browser does not support the audio element.
