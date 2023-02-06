@@ -22,3 +22,11 @@ h1, h2 {
     padding: 10px;
     margin-top: 50px;
 }
+
+video {
+    width: 90%;
+}
+
+table audio {
+    width: 200px;
+}
